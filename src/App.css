@@ -1,0 +1,51 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black !important;
+}
+
+.sidebar {
+    background-color: #2e2e2e;
+}
+
+.header {
+    background-color: #2e2e2e;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    background-color: #2e2e2e;
+    padding: 25px;
+}
+
+.card-container {
+    margin-top: 20px;
+}
+
+.search-products {
+    background-color: #2e2e2e;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 3px 25px;
+    padding: 7px 10px 10px;
+}
+
+.transaction {
+    background-color: #2e2e2e;
+}
+
+.project-card {
+    background-color: #252526;
+}
+
+.open-project {
+    background-color: #2e2e2e;
+}
