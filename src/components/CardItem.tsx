@@ -1,4 +1,4 @@
-import React, { SetStateAction, useEffect } from "react";
+import React, { useEffect } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import {
   CommentsResponse,
@@ -6,7 +6,6 @@ import {
   ProductsResponse,
   RecipesResponse,
 } from "../Typescripts/Card";
-import { GoArrowDownLeft } from "react-icons/go";
 
 type CardItemProps = {
   styles: React.CSSProperties;
