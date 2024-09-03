@@ -35,7 +35,7 @@ const Header = ({ styles, commentApi, recipeApi }: HeaderProps) => {
         />
         <div className="flex">
           <div className="mr-2">
-            <Badge count={commentApi?.comments.length}>
+            <Badge count={commentApi?.comments.length} style={{backgroundColor: 'green'}}>
               <MdEmail style={styles} onClick={handleComment} />
             </Badge>
           </div>

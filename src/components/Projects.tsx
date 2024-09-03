@@ -1,4 +1,3 @@
-import React from "react";
 import DoughnutChart from "./DoughnutChart";
 import OpenProjects from "./OpenProjects";
 

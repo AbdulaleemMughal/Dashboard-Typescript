@@ -17,12 +17,14 @@ type SideBarProps = {
 const SideBar = ({ styles, menuStyle }: SideBarProps) => {
   const [openMenu, setOpenMenu] = useState<boolean>(true);
   const [hamburgerMenu, setHamburgerMenu] = useState<boolean>(false);
+  const [handleSize, setHandleSize] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 767) {
         setOpenMenu(false);
         setHamburgerMenu(true);
+        setHandleSize(true);
       } else {
         setOpenMenu(true);
         setHamburgerMenu(false);
@@ -39,7 +41,10 @@ const SideBar = ({ styles, menuStyle }: SideBarProps) => {
   return (
     <div className="col-md-2">
       <div
-        className={classNames("text-white sidebar h-[100vh] transition-all duration-500", !openMenu && 'h-10')}
+        className={classNames(
+          openMenu ? "text-white h-[100vh] transition-all duration-500" : "h-10 text-white",
+          handleSize ? "h-fit" : "h-[100vh]"
+        )}
       >
         <div className="mx-3">
           <div className="flex justify-between">

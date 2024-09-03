@@ -1,17 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { ProjectResponse } from "../Typescripts/Project";
 import { ProjectArr } from "../Typescripts/Project";
-import { FcDocument } from "react-icons/fc";
-import { MdCloudDownload } from "react-icons/md";
-import { FaRegClock } from "react-icons/fa6";
-import { IoMdMailOpen } from "react-icons/io";
-import { BiSolidCircleThreeQuarter } from "react-icons/bi";
 
 type OpenProjectsProps = {
   styles: React.CSSProperties;
 };
 
-const OpenProjects = ({ styles }: OpenProjectsProps) => {
+const OpenProjects = ({  }: OpenProjectsProps) => {
 
   const [items, setItems] = useState<ProjectResponse[] | null>(null);
 
