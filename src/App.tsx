@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import SideBar from "./components/SideBar";
 import Card from "./components/Cards";
-import Projects from "./components/Projects";
 import classNames from "classnames";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -40,7 +40,7 @@ function App() {
         </div>
         <div className={classNames(handleSidebar ? "main-content" : "col-md-10")}>
           <Card />
-          <Projects />
+          <Footer />
         </div>
       </div>
     </>

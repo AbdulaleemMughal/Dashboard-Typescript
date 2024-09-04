@@ -23,7 +23,7 @@ const CardItem = ({ styles, recipeApi, title }: CardItemProps) => {
   return (
     <>
       <div className="col-md-3">
-        <div className="card">
+        <div className="card mt-2">
           <div className="row items-center">
             <div className="col-md-4 text-white">
               <h3 className="text-2xl">${recipeApi?.total}</h3>

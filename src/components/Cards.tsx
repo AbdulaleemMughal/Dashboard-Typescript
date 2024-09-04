@@ -7,6 +7,8 @@ import {
 } from "../Typescripts/Card";
 import CardItem from "./CardItem";
 import Header from "./Header";
+import Projects from "./Projects";
+import Sales from "./Sales";
 
 const Cards = () => {
   const [recipeApi, setRecipeApi] = useState<RecipesResponse | null>(null);
@@ -115,6 +117,9 @@ const Cards = () => {
           />
         </div>
       </div>
+
+      <Projects />
+      <Sales productApi={productApi} postApi={postApi} commentApi={commentApi} />
     </>
   );
 };

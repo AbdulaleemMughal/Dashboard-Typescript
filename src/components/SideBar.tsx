@@ -42,7 +42,7 @@ const SideBar = ({ styles, menuStyle }: SideBarProps) => {
     <div className="col-md-2">
       <div
         className={classNames(
-          openMenu ? "text-white h-[100vh] transition-all duration-500" : "h-10 text-white",
+          openMenu ? "text-white h-[100vh] w-52 transition-all duration-500" : "h-10 text-white",
           handleSize ? "h-fit" : "h-[100vh]"
         )}
       >
