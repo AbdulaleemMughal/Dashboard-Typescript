@@ -10,7 +10,7 @@ const Order = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetchOrders().then((i) => setLoading(false));
+    fetchOrders().then(() => setLoading(false));
   }, []);
 
   const fetchOrders = async () => {
