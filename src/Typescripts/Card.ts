@@ -36,7 +36,7 @@ export interface ProductsResponse extends Product {
   limit: number;
 }
 
-interface Product {
+export interface Product {
   id: number;
   title: string;
   description: string;
@@ -95,4 +95,39 @@ export interface CommentsResponse extends Comment {
   total: number;
   skip: number;
   limit: number;
+}
+
+// Interface for individual customers
+
+export interface CustomerResponse {
+  id: number;
+  firstname: string;
+  lastname: string;
+  maidenName: string;
+  username: string;
+  phone: number;
+  gender: string;
+  address: Address;
+  [key: string]: any;
+}
+
+interface Address {
+  address: string;
+}
+
+// Interface for individual orders
+export interface OrderResponse extends SingleOrder {
+  id: number;
+  products: SingleOrder[];
+  [key: string]: any;
+}
+
+export interface SingleOrder {
+  id: number;
+  title: string;
+  price: number;
+  discountPercentage: number;
+  quantity: number;
+  total: number;
+  [key: string]: any;
 }

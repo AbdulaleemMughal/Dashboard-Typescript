@@ -6,7 +6,7 @@ import {
 import SaleCard from "./SaleCard";
 import { LuDatabase } from "react-icons/lu";
 import { TfiBag } from "react-icons/tfi";
-import { IoMdLaptop } from "react-icons/io";
+import { SiXbox } from "react-icons/si";
 
 type Salesprops = {
   productApi: ProductsResponse | null;
@@ -23,7 +23,7 @@ const Sales = ({ productApi, postApi, commentApi }: Salesprops) => {
             productApi={productApi}
             title="Revenue"
             desc="11.38% since last month"
-            icon= <IoMdLaptop />
+            icon= <SiXbox />
             styles= {{fontSize: '80px', color: 'skyblue'}}
           />
           <SaleCard

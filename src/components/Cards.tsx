@@ -9,6 +9,7 @@ import CardItem from "./CardItem";
 import Header from "./Header";
 import Projects from "./Projects";
 import Sales from "./Sales";
+import { fetchCommentsData, fetchPostsData, fetchProductsData, fetchRecipesData } from "../Typescripts/Api";
 
 const Cards = () => {
   const [recipeApi, setRecipeApi] = useState<RecipesResponse | null>(null);
@@ -25,28 +26,25 @@ const Cards = () => {
 
   // Fetching the Data...
 
-  const fetchRecipes = async (): Promise<void> => {
-    const data = await fetch("https://dummyjson.com/recipes");
-    const json: RecipesResponse = await data.json();
-    setRecipeApi(json);
+  const fetchRecipes = async () => {
+    const response = await fetchRecipesData("https://dummyjson.com/recipes");
+    setRecipeApi(response);
+    // console.log(response); 
   };
 
   const fetchProducts = async (): Promise<void> => {
-    const data = await fetch("https://dummyjson.com/products");
-    const json: ProductsResponse = await data.json();
-    setProductApi(json);
+    const response = await fetchProductsData("https://dummyjson.com/products");
+    setProductApi(response);
   };
 
   const fetchPosts = async (): Promise<void> => {
-    const data = await fetch("https://dummyjson.com/posts");
-    const json: PostsResponse = await data.json();
-    setPostApi(json);
+    const response = await fetchPostsData("https://dummyjson.com/posts");
+    setPostApi(response);
   };
 
   const fetchComments = async (): Promise<void> => {
-    const data = await fetch("https://dummyjson.com/comments");
-    const json: CommentsResponse = await data.json();
-    setCommentApi(json);
+    const response = await fetchCommentsData("https://dummyjson.com/comments");
+    setCommentApi(response);
   };
 
   return (
@@ -58,8 +56,6 @@ const Cards = () => {
           color: "white",
           paddingRight: "5px",
         }}
-        commentApi={commentApi}
-        recipeApi={recipeApi}
       />
       <div className="card-container">
         <div className="row">
