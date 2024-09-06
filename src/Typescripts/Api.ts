@@ -34,7 +34,7 @@ export const fetchPostsData = async (url: string): Promise<PostsResponse> => {
 export const fetchCustomersData = async (url: string): Promise<CustomerResponse[]> => {
     const data = await fetch(url);
     const json = await data.json();
-    return json.users as CustomerResponse[]
+    return json.users as CustomerResponse[];
 };
 
 export const fetchOrderData = async (url: string): Promise<OrderResponse> => {

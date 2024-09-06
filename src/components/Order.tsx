@@ -14,9 +14,9 @@ const Order = () => {
   }, []);
 
   const fetchOrders = async () => {
-    const response = await fetchOrderData("https://dummyjson.com/carts");
-    setDataSource(response.carts.products as OrderResponse[]);
-    console.log(dataSource);  
+    const response = await fetchOrderData("https://dummyjson.com/carts/1");
+    setDataSource(response.products as OrderResponse[]);
+    console.log(dataSource);
   };
 
   return (
@@ -30,9 +30,11 @@ const Order = () => {
         }}
       />
       <div className="order">
-        <h1 className="text-white text-3xl font-bold font-sans py-2">Recent Orders</h1>
+        <h1 className="text-white text-3xl font-bold font-sans py-2">
+          Recent Orders
+        </h1>
         <Table
-        className="custom-table"
+          className="custom-table"
           columns={[
             {
               title: "Title",

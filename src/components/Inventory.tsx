@@ -18,7 +18,6 @@ const Inventory = () => {
   const getInventory = async () => {
     const response = await fetchProductsData("https://dummyjson.com/products");
     setDataSource(response.products);
-    console.log(dataSource);
   };
 
   return (

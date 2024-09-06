@@ -16,7 +16,6 @@ const Customer = () => {
   const fetchCustomer = async () => {
     const response = await fetchCustomersData("https://dummyjson.com/users");
     setDataSource(response as CustomerResponse[]);
-    console.log(response);
   };
 
   return (

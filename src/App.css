@@ -118,3 +118,11 @@ background-color: #2e2e2e !important;
 .custom-table .ant-pagination-item-active a {
   color: #fff;
 }
+
+.ant-pagination-total-text {
+  color: white;
+}
+
+.anticon {
+  color: white;
+}
